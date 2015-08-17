@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="unqualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified">
+	<xsd:element name="output">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="listaCount" type="xsd:integer"
+					minOccurs="1" />
+				<xsd:element name="itemCount" type="xsd:integer"
+					minOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
