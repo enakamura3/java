@@ -1,0 +1,24 @@
+<root>
+	<input>
+		<lista1>
+			<item1>a</item1>
+			<item2>b</item2>
+			<item3>c</item3>
+		</lista1>
+		<lista2>
+			<item1>d</item1>
+			<item2>e</item2>
+			<item3>f</item3>
+			<lista1>
+				<item1>a</item1>
+				<item2>b</item2>
+				<item3>c</item3>
+			</lista1>
+			<lista2>
+				<item1>d</item1>
+				<item2>e</item2>
+				<item3>f</item3>
+			</lista2>
+		</lista2>
+	</input>
+</root>
