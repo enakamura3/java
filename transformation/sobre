@@ -1,7 +1,0 @@
-Exemplo de classe java que realiza operacoes com transformacao e validacao de XML com XSD
-
-1. Le arquivo de XML de entrada
-2. Le arquivo de transformacao XSL
-3. Executa a transformacao
-4. Le arquivo de XSD
-5. Valida o XML resultado da transformacao com o arquivo XSD
