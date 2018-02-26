@@ -18,7 +18,15 @@ http://localhost:8080/sendMessage/message?token=c86VHZESwf0:APA91bGqaunz6Vc5t0sY
 * SLF4J
 
 ### FCM - Firebase Cloud Message
-É preciso atualizar a "serverKey" na classe "Constants" com o chave do projeto no Firebase.
+É preciso atualizar a "serverKey" na classe "Constants" com o chave do projeto no Firebase. Essa "serverKey" é a informação que será enviada no cabeçalho HTTP em "Authorization".
+
+Onde fica essa informação?
+1. Console do Firebase > Project Overview > Engrenagem > Project Configuration
+2. Na página que abrir escolher a aba "Cloud Messaging"
+3. A informação estará no campo "Server Key"
+
+___
+
 O FCM trabalha com mensagens em JSON.
 Exemplo de mensagem de request:
 
