@@ -19,16 +19,38 @@ http://localhost:8080/sendMessage/message?token=c86VHZESwf0:APA91bGqaunz6Vc5t0sY
 
 ### FCM - Firebase Cloud Message
 É preciso atualizar a "serverKey" na classe "Constants" com o chave do projeto no Firebase.
-O FCM trabalho com mensagens em JSON.
+O FCM trabalha com mensagens em JSON.
 Exemplo de mensagem de request:
+
+Endpoint:
+> https://fcm.googleapis.com/fcm/send
+
+Parâmetros do cabeçalho HTTP:
+> Content-Type: application/json
+> Authorization: key=AAAASgXNggY:APA91bFmiVnIjuWSvNubsa7_kIzIeByoSvovuYQODOFNlpucppSXNxot6-DcbViRvK4BLva...
+
+Corpo da mensagem HTTP:
+No caso de mandar a notificação para um tópico:
 
 ```javascript
 {
-	"to": "c86VHZESwf0:APA91bGqaunz6Vc5t0sYjv1ZJAJOcaNS-0gouQMJ0tDZJVXwyMH77zYVe7jSiefs5B_2KRj2yElKj9EnhVrGhdV7LyFbUstCq2l9Hzgw6hek7WhX6EXRM9SRi4wsmax103e8KdyCVLVf",
-	"notification": {
-		"title": "Teste Maroto",
-		"body": "Hello World!!!!"
-	}
+    "to": "/topics/topicoTeste",
+    "notification": {
+        "title": "Java client",
+        "body": "Test from java client to NEOENERGIA!"
+    }
+}
+```
+
+No caso de mandar a notificação para apenas um aparelho, colocamos o token
+
+```javascript
+{
+    "to": "c86VHZESwf0:APA91bGqaunz6Vc5t0sYjv1ZJAJOcaNS-0gouQMJ0tDZJVXwyMH77zYVe7jSiefs5B_2KRj2yElKj9EnhVrGhdV7LyFbUstCq2l9Hzgw6hek7WhX6EXRM9SRi4wsmax103e8KdyCVLVf",
+    "notification": {
+        "title": "TOKEN TEST",
+        "body": "Test from java client"
+    }
 }
 ```
 
